@@ -1,0 +1,60 @@
+section,
+aside {
+    /*border: 1px solid black;*/
+}
+
+.boxbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.empty {
+    flex: 1 0 10%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
+
+.full {
+    background-color: orange;
+}
+
+.color-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.color-cube {
+    width: 45px;
+    height: 45px;
+    background-color: whitesmoke; /* default color if user enters invalid input */
+}
+
+/* initial setup for default entries */
+/* TODO: currently this makes all below orange, which is not the point! */
+#tasks:first-child .color-cube {
+    background-color: orange;
+}
+
+/* TODO: the below has no effect, not sure why atm */
+#tasks:nth-child(2) .color-cube {
+    background-color: deepskyblue;
+}
+
+#tasks:last-child > .color-cube {
+    background-color: limegreen;
+}
+
+.color-desc {
+    padding-right: 20px;
+}
+
+#add-tasks {
+    padding: 10px;
+}
