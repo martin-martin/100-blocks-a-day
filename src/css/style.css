@@ -34,6 +34,9 @@ aside {
     width: 45px;
     height: 45px;
     background-color: whitesmoke; /* default color if user enters invalid input */
+    border-radius: 5px;
+    /* TODO: doesn't apply padding atm? */
+    padding-left: 20px;
 }
 
 /* initial setup for default entries */
