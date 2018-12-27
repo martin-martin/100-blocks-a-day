@@ -1,33 +1,27 @@
-section,
-aside {
-    /*border: 1px solid black;*/
-}
-
-.boxbox {
+/* SECTION: the left part that holds all blocks in the grid */
+.block-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.empty {
+/* a single 10 minute time slot block */
+.block {
     flex: 1 0 10%;
     border: 1px solid black;
     width: 50px;
     height: 50px;
 }
 
-.full {
-    background-color: orange;
-}
-
+/* ASIDE: defines the color selection area */
 .color-card {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     height: 50px;
-    border: 1px solid gray;
-    border-radius: 5px;
+    border-bottom: 1px solid gray;
     margin: 10px;
+    font-size: 1.5em;
 }
 
 .color-cube {
@@ -35,27 +29,24 @@ aside {
     height: 45px;
     background-color: whitesmoke; /* default color if user enters invalid input */
     border-radius: 5px;
-    /* TODO: doesn't apply padding atm? */
-    padding-left: 20px;
 }
 
 /* initial setup for default entries */
-/* TODO: currently this makes all below orange, which is not the point! */
-#tasks:first-child .color-cube {
+#tasks > .color-card:first-child > .color-cube {
     background-color: orange;
 }
 
-/* TODO: the below has no effect, not sure why atm */
-#tasks:nth-child(2) .color-cube {
+#tasks > .color-card:nth-child(2) .color-cube {
     background-color: deepskyblue;
 }
 
-#tasks:last-child > .color-cube {
+#tasks > .color-card:nth-child(3) .color-cube {
     background-color: limegreen;
 }
 
 .color-desc {
-    padding-right: 20px;
+    /* could add the below to move it a bit off the edge */
+    /*padding-right: 20px;*/
 }
 
 #add-tasks {
